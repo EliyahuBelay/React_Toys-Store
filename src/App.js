@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css' ;
+import Toy from './Components/Toy/Toy';
+import ClientContexFunc from './MyProvider/ClientContex';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ClientContexFunc hierarchy={<Toy toyName="buba"/>}>
+      
+    </ClientContexFunc>
+    // <ClientContex.Provider value="Kid">
+    // <div className="App">
+    //   <header className="App-header">
+    //     <Toy toyName="buba"/>
+    //   </header>
+    // </div>
+    // </ClientContex.Provider>
   );
 }
 
